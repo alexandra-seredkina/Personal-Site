@@ -1,0 +1,10 @@
+name: seredkina-site
+paths:
+  - src
+  - tests
+paths-ignore:
+  - node_modules
+  - .next
+  - public
+  - assets
+  - "**/messages/**"

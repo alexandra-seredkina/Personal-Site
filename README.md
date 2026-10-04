@@ -74,6 +74,13 @@ upgrade-insecure-requests        # HTTPS only
 - Escaped JSON-LD (no `</script>` breakout)
 - [`/.well-known/security.txt`](https://seredkina.dev/.well-known/security.txt)
 
+**CI (GitHub)**
+
+- `CI` — lint, types, unit, build, Playwright + axe
+- `Security` — Gitleaks, Semgrep (`auto`), `pnpm audit` (high+), dependency-review on PRs
+- `CodeQL` — JS/TS analysis → GitHub Security tab
+- Dependabot — weekly npm + Actions updates (grouped minor/patch)
+
 ## Layout
 
 ```
