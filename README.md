@@ -32,7 +32,7 @@
 [![Hero](assets/video/stills/hero.jpg)](assets/video/site-scroll.mp4)
 
 | Stack & experience | CTF | Writing |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | [![Stack](assets/video/stills/stack.jpg)](assets/video/site-scroll.mp4) | [![CTF](assets/video/stills/ctf.jpg)](assets/video/site-scroll.mp4) | [![Writing](assets/video/stills/writing.jpg)](assets/video/site-scroll.mp4) |
 
 Full scroll: [`assets/video/site-scroll.mp4`](assets/video/site-scroll.mp4) (54s, 1440×900).
@@ -101,3 +101,11 @@ pnpm test:e2e   # Playwright + axe (prod build on :3100)
 | `SITE_PASSWORD` | Basic auth for the whole site |
 | `SITE_NOINDEX` | `1` → noindex + robots disallow |
 | `PW_CHANNEL` | `chrome` → local Chrome for e2e |
+
+## Artwork
+
+Site character — poses in `public/character/`.
+
+| hero | wave | laptop | reading | lost |
+| :---: | :---: | :---: | :---: | :---: |
+| <img src="public/character/hero.webp" alt="hero"> | <img src="public/character/wave.webp" alt="wave"> | <img src="public/character/laptop.webp" alt="laptop"> | <img src="public/character/reading.webp" alt="reading"> | <img src="public/character/lost.webp" alt="lost"> |
