@@ -1,0 +1,270 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ---------- design tokens ---------- */
+@theme {
+  --color-bg: #06070b;
+  --color-surface: #0d0f17;
+  --color-elevated: #141724;
+  --color-fg: #eef0f7;
+  --color-muted: #8d93a8;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-accent: #ff3358;
+  /* Darker red for filled surfaces with white text (WCAG AA 4.7:1). */
+  --color-accent-strong: #e11d48;
+  --color-accent-2: #a35bff;
+  --color-ok: #3ddc97;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-unbounded), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-spin-slow: spin 28s linear infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-pulse-dot: pulse-dot 2s ease-out infinite;
+  --animate-scan: scan 4.5s ease-in-out infinite;
+  /* Character frames: animate `--frame` (0 = base, 1 = second frame) on the frame stack. */
+  --animate-frame-blink: frame-blink 5s linear infinite;
+  --animate-frame-wave: frame-wave 3.2s linear infinite;
+  --animate-frame-type: frame-type 2.4s linear infinite;
+  --animate-frame-think: frame-think 9s ease-in-out infinite;
+
+  @keyframes frame-blink {
+    0%,
+    96% {
+      --frame: 0;
+    }
+    96.1%,
+    97.6% {
+      --frame: 1;
+    }
+    97.7%,
+    100% {
+      --frame: 0;
+    }
+  }
+  /* Three quick waves, then a rest. */
+  @keyframes frame-wave {
+    0%,
+    9.9%,
+    20%,
+    29.9%,
+    40%,
+    49.9%,
+    60%,
+    100% {
+      --frame: 0;
+    }
+    10%,
+    19.9%,
+    30%,
+    39.9%,
+    50%,
+    59.9% {
+      --frame: 1;
+    }
+  }
+  /* Bursts of keystrokes with short pauses. */
+  @keyframes frame-type {
+    0%,
+    7.9%,
+    16%,
+    23.9%,
+    32%,
+    39.9%,
+    62%,
+    69.9%,
+    78%,
+    100% {
+      --frame: 0;
+    }
+    8%,
+    15.9%,
+    24%,
+    31.9%,
+    54%,
+    61.9%,
+    70%,
+    77.9% {
+      --frame: 1;
+    }
+    40%,
+    53.9% {
+      --frame: 0;
+    }
+  }
+  /* Reads, pauses to think (hand to head), goes back to reading. */
+  @keyframes frame-think {
+    0%,
+    50% {
+      --frame: 0;
+    }
+    56%,
+    82% {
+      --frame: 1;
+    }
+    88%,
+    100% {
+      --frame: 0;
+    }
+  }
+
+  --animate-spin-reverse: spin 36s linear infinite reverse;
+  --animate-morph: morph 12s ease-in-out infinite;
+  --animate-morph-alt: morph 9s ease-in-out infinite reverse;
+
+  @keyframes morph {
+    0%,
+    100% {
+      border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    }
+    33% {
+      border-radius: 70% 30% 46% 54% / 30% 39% 61% 70%;
+    }
+    66% {
+      border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    }
+  }
+
+  @keyframes scan {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(300%);
+    }
+  }
+
+  @keyframes float {
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes pulse-dot {
+    0% {
+      box-shadow: 0 0 0 0 rgb(61 220 151 / 0.6);
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgb(61 220 151 / 0);
+    }
+  }
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-accent) 0%,
+    #ff7aa2 45%,
+    var(--color-accent-2) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+@utility card {
+  border-radius: 1.25rem;
+  border: 1px solid var(--color-line);
+  background-color: rgb(13 15 23 / 0.85);
+}
+
+/* ---------- base ---------- */
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+  }
+  ::selection {
+    @apply bg-accent-strong text-white;
+  }
+  :focus-visible {
+    @apply rounded-sm outline-2 outline-offset-2 outline-accent;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* ---------- character frames ---------- */
+/* Registered so it can interpolate (needed for the "think" cross-fade). */
+@property --frame {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+/* Exactly one frame is visible at a time; reduced motion keeps --frame at 0 (base frame). */
+.frame-base {
+  opacity: calc(1 - var(--frame));
+}
+
+.frame-alt {
+  opacity: var(--frame);
+}
+
+/* ---------- scroll reveal (progressive enhancement, no JS) ---------- */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+
+/* ---------- prose (MDX) ---------- */
+.prose {
+  --tw-prose-body: var(--color-fg);
+  --tw-prose-headings: var(--color-fg);
+  --tw-prose-lead: var(--color-muted);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-fg);
+  --tw-prose-counters: var(--color-muted);
+  --tw-prose-bullets: var(--color-accent);
+  --tw-prose-hr: var(--color-line);
+  --tw-prose-quotes: var(--color-fg);
+  --tw-prose-quote-borders: var(--color-accent);
+  --tw-prose-code: var(--color-fg);
+  --tw-prose-pre-code: var(--color-fg);
+  --tw-prose-pre-bg: var(--color-surface);
+  --tw-prose-th-borders: var(--color-line);
+  --tw-prose-td-borders: var(--color-line);
+}
+
+.prose :where(h2, h3) {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.prose :where(code):not(:where(pre code))::before,
+.prose :where(code):not(:where(pre code))::after {
+  content: none;
+}
+
+.prose :where(code):not(:where(pre code)) {
+  @apply rounded-md bg-elevated px-1.5 py-0.5 font-normal;
+}
+
+/* ---------- code blocks (rehype-pretty-code) ---------- */
+figure[data-rehype-pretty-code-figure] pre {
+  @apply overflow-x-auto rounded-2xl border border-line bg-surface p-5 text-sm leading-relaxed;
+}

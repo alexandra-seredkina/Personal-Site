@@ -1,0 +1,171 @@
+{
+  "Meta": {
+    "title": "Aleksandra Seredkina — Application Security Engineer & Penetrationstesterin",
+    "description": "Application Security Engineer und Penetrationstesterin für Web und APIs mit über 4 Jahren Softwareentwicklung. DevSecOps, Secure Code Reviews, OWASP Top 10. Top 2 % auf TryHackMe."
+  },
+  "Nav": {
+    "stack": "Stack",
+    "experience": "Erfahrung",
+    "ctf": "CTF",
+    "projects": "Projekte",
+    "writing": "Beiträge",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "cv": "Lebenslauf",
+    "language": "Sprache",
+    "skip": "Zum Inhalt springen",
+    "menu": "Hauptnavigation"
+  },
+  "Hero": {
+    "available": "Offen für AppSec- & Pentest-Stellen",
+    "greeting": "Hallo, ich bin",
+    "role": "Application Security Engineer",
+    "specialtiesLead": "Ich mache",
+    "specialties": [
+      "Web- & API-Pentests",
+      "DevSecOps-Pipelines",
+      "Secure Code Reviews",
+      "Threat Modeling"
+    ],
+    "lede": "Über 4 Jahre habe ich produktive Software gebaut — heute breche ich sie auf, damit sie sicher bleibt. Ich verstehe Code und Architektur, nicht nur die Exploits.",
+    "location": "Tiflis, Georgien · remote möglich",
+    "ctaCv": "Lebenslauf herunterladen",
+    "ctaContact": "Kontakt aufnehmen",
+    "characterAlt": "Anime-Illustration von Aleksandra mit kurzen roten Haaren und verschränkten Armen"
+  },
+  "Stats": {
+    "title": "Auf einen Blick",
+    "years": "Jahre Softwareentwicklung",
+    "rank": "im TryHackMe-Ranking",
+    "rooms": "abgeschlossene Labs",
+    "streak": "Tage Lernserie"
+  },
+  "Stack": {
+    "eyebrow": "stack",
+    "title": "Womit ich breche und baue",
+    "description": "Vom Browser bis zur Pipeline: Ich greife Anwendungen mit demselben Stack an, mit dem ich sie selbst ausgeliefert habe.",
+    "groups": {
+      "appsec": "Anwendungssicherheit",
+      "offensive": "Offensive Security",
+      "devsecops": "DevSecOps & Infrastruktur",
+      "development": "Softwareentwicklung"
+    }
+  },
+  "Experience": {
+    "eyebrow": "erfahrung",
+    "title": "Wo ich gearbeitet habe",
+    "present": "Heute",
+    "items": {
+      "dvg": {
+        "role": "Senior Frontend Developer, AppSec",
+        "summary": "Frontend und Anwendungssicherheit für industrielle MES- und Pick-to-Light-Systeme in Lager und Produktion.",
+        "highlights": [
+          "Echtzeit-Frontend umgesetzt: Pick-to-Light über WebSockets und eine interaktive Lagerkarte.",
+          "DevSecOps-Pipeline in GitLab CI/CD aufgebaut: SAST mit Semgrep, SCA und Secret Detection bei jedem Merge Request.",
+          "Audits von Webanwendungen und APIs vor dem Release — IDOR, fehlerhafte Authentifizierung, XSS, CSRF.",
+          "Security Design Reviews und Coaching des Teams zu sicherem Code.",
+          "Infrastruktur gehärtet: Rate Limiting, Security-Header, Nginx und UFW, SSH-Richtlinien, 2FA und Zugriffs-Audits."
+        ]
+      }
+    },
+    "educationTitle": "Ausbildung",
+    "education": {
+      "college": {
+        "title": "Elektrische & elektromechanische Anlagen",
+        "school": "College für Maschinenbau"
+      }
+    },
+    "certsTitle": "Zertifikate",
+    "issued": "Ausgestellt {date}",
+    "expires": "gültig bis {date}",
+    "credential": "Zertifikats-ID",
+    "view": "Zertifikat ansehen"
+  },
+  "Ctf": {
+    "eyebrow": "ctf",
+    "title": "Capture the Flag",
+    "description": "Wettbewerbe, in denen ich meine Fähigkeiten unter Zeitdruck teste.",
+    "certificate": "Zertifikat",
+    "post": "Beitrag auf LinkedIn",
+    "items": {
+      "avito": {
+        "summary": "30-stündiger Online-Marathon mit realitätsnahen Aufgaben: Logikfehler in Web & APIs, Linux-Rechteausweitung, Code-Analyse und Forensik.",
+        "result": "Abgeschlossen · Zertifikat"
+      },
+      "alfa": {
+        "summary": "Einer der größten Security-Wettbewerbe Russlands mit fast 5.000 Teilnehmenden.",
+        "result": "Security League · Team in den Top 20 % von 513"
+      },
+      "aclabs": {
+        "summary": "Einwöchiges internationales Open CTF: Krypto & Stego, Forensik, OSINT & GEOINT, Linux & Web.",
+        "result": "Teilnahme"
+      },
+      "tctf": {
+        "summary": "Mein erstes ernsthaftes CTF: 36 Stunden nonstop, 50 Aufgaben aus Web, Infrastruktur, Krypto und Reverse Engineering, 6.433 Teams. Allein gespielt.",
+        "result": "Security League · Platz 119 von 977 · 8 von 30 gelöst"
+      },
+      "faust": {
+        "summary": "Achtstündiges internationales Attack-Defense-CTF: die eigenen Vulnbox-Dienste am Laufen halten und gleichzeitig dieselben Dienste aller anderen Teams angreifen und patchen.",
+        "result": "Team OpSec · Platz 47 von 502 (Top 10 %)"
+      }
+    },
+    "scoreboard": "Rangliste"
+  },
+  "Projects": {
+    "eyebrow": "projekte",
+    "title": "Was ich gebaut habe",
+    "source": "Quellcode",
+    "laptopAlt": "Anime-Aleksandra tippt auf einem Laptop",
+    "items": {
+      "shadowbox": {
+        "title": "ShadowBox",
+        "body": "Ein selbst gehosteter anonymer E-Mail-Dienst: NestJS-API, PostgreSQL, Docker-Deployment hinter Nginx mit automatischem TLS."
+      },
+      "site": {
+        "title": "Diese Website",
+        "body": "Next.js mit strikter nonce-basierter CSP, gehärteten Security-Headern, ohne Cookies, ohne Drittanbieter-Skripte und mit automatisierten Barrierefreiheitstests."
+      }
+    }
+  },
+  "Writing": {
+    "eyebrow": "beiträge",
+    "title": "Notizen aus der Praxis",
+    "blogTitle": "Aus dem Blog",
+    "linkedinTitle": "Auf LinkedIn",
+    "allPosts": "Alle Blogbeiträge",
+    "readOnLinkedin": "Auf LinkedIn lesen",
+    "allLinkedin": "Alle LinkedIn-Beiträge"
+  },
+  "Contact": {
+    "eyebrow": "kontakt",
+    "title": "Machen wir Ihre Anwendung schwerer angreifbar",
+    "body": "Offen für AppSec- und Pentest-Stellen, freiberufliche Assessments und spannende Gespräche. Am schnellsten erreichen Sie mich per E-Mail oder Telegram.",
+    "copy": "E-Mail-Adresse kopieren",
+    "copied": "E-Mail-Adresse kopiert",
+    "waveAlt": "Anime-Aleksandra winkt zur Begrüßung"
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Write-ups, Notizen und Erkenntnisse aus Anwendungssicherheit und OSINT.",
+    "empty": "Noch keine Beiträge.",
+    "readingTime": "{minutes} Min. Lesezeit",
+    "back": "Alle Beiträge",
+    "fallbackNotice": "Dieser Beitrag ist noch nicht übersetzt — hier die englische Version.",
+    "readingAlt": "Anime-Aleksandra liest Notizen",
+    "articlesTitle": "Artikel",
+    "linkedinTitle": "Von LinkedIn",
+    "linkedinDescription": "Kurze Beiträge aus meinem LinkedIn — Labs, CTFs und Security-News. Im englischen Original.",
+    "viewOnLinkedin": "Auf LinkedIn ansehen"
+  },
+  "Footer": {
+    "privacy": "Keine Cookies. Keine Tracker. Strikte CSP.",
+    "security": "security.txt",
+    "rss": "RSS"
+  },
+  "NotFound": {
+    "title": "404 — hier gibt es nichts auszunutzen",
+    "body": "Die gesuchte Seite existiert nicht oder ist umgezogen.",
+    "home": "Zur Startseite",
+    "lostAlt": "Anime-Aleksandra schaut verwirrt"
+  }
+}

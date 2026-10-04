@@ -1,0 +1,171 @@
+{
+  "Meta": {
+    "title": "Aleksandra Seredkina — Application Security Engineer",
+    "description": "Application Security Engineer and web & API penetration tester with 4+ years of software engineering. DevSecOps, secure code review, OWASP Top 10. TryHackMe top 2%."
+  },
+  "Nav": {
+    "stack": "Stack",
+    "experience": "Experience",
+    "ctf": "CTF",
+    "projects": "Projects",
+    "writing": "Writing",
+    "contact": "Contact",
+    "blog": "Blog",
+    "cv": "CV",
+    "language": "Language",
+    "skip": "Skip to content",
+    "menu": "Main navigation"
+  },
+  "Hero": {
+    "available": "Open to AppSec & pentest roles",
+    "greeting": "Hi, I'm",
+    "role": "Application Security Engineer",
+    "specialtiesLead": "I do",
+    "specialties": [
+      "web & API pentesting",
+      "DevSecOps pipelines",
+      "secure code review",
+      "threat modeling"
+    ],
+    "lede": "4+ years of building production software — now I break it so it stays unbroken. I understand the code and the architecture, not just the exploits.",
+    "location": "Tbilisi, Georgia · remote-friendly",
+    "ctaCv": "Download CV",
+    "ctaContact": "Get in touch",
+    "characterAlt": "Anime-style illustration of Aleksandra with short red hair, arms crossed"
+  },
+  "Stats": {
+    "title": "At a glance",
+    "years": "years in software engineering",
+    "rank": "global rank on TryHackMe",
+    "rooms": "hands-on labs completed",
+    "streak": "day learning streak"
+  },
+  "Stack": {
+    "eyebrow": "stack",
+    "title": "Tools I break and build with",
+    "description": "From the browser to the pipeline: I attack applications with the same stack I used to ship them.",
+    "groups": {
+      "appsec": "Application security",
+      "offensive": "Offensive security",
+      "devsecops": "DevSecOps & infrastructure",
+      "development": "Software engineering"
+    }
+  },
+  "Experience": {
+    "eyebrow": "experience",
+    "title": "Where I've been",
+    "present": "Present",
+    "items": {
+      "dvg": {
+        "role": "Senior Frontend Developer, AppSec",
+        "summary": "Frontend and application security for industrial MES and Pick-to-Light systems used on warehouse and production floors.",
+        "highlights": [
+          "Shipped the real-time frontend: WebSocket-driven Pick-to-Light and an interactive warehouse map.",
+          "Built the DevSecOps pipeline in GitLab CI/CD: SAST with Semgrep, SCA and secret detection on every merge request.",
+          "Audit web apps and APIs before release — IDOR, broken authentication, XSS, CSRF.",
+          "Run security design reviews and coach developers on secure coding.",
+          "Hardened infrastructure: rate limiting, security headers, Nginx and UFW, SSH policies, 2FA and access audits."
+        ]
+      }
+    },
+    "educationTitle": "Education",
+    "education": {
+      "college": {
+        "title": "Electrical & electromechanical equipment",
+        "school": "College of Mechanical Engineering"
+      }
+    },
+    "certsTitle": "Certifications",
+    "issued": "Issued {date}",
+    "expires": "valid until {date}",
+    "credential": "Credential ID",
+    "view": "View certificate"
+  },
+  "Ctf": {
+    "eyebrow": "ctf",
+    "title": "Capture the Flag",
+    "description": "Competitions where I pressure-test my skills against the clock.",
+    "certificate": "Certificate",
+    "post": "Write-up on LinkedIn",
+    "items": {
+      "avito": {
+        "summary": "30-hour online marathon of real-world challenges: web & API logic bugs, Linux privilege escalation, code analysis and forensics.",
+        "result": "Completed · certificate"
+      },
+      "alfa": {
+        "summary": "One of the largest security competitions in Russia, with nearly 5,000 participants.",
+        "result": "Security League · team in the top 20% of 513"
+      },
+      "aclabs": {
+        "summary": "Week-long international open CTF: crypto & stego, forensics, OSINT & GEOINT, Linux & web.",
+        "result": "Participant"
+      },
+      "tctf": {
+        "summary": "My first serious CTF: 36 hours non-stop, 50 tasks across web, infrastructure, crypto and reverse engineering, 6,433 teams. Played solo.",
+        "result": "Security League · 119th of 977 · 8 of 30 solved"
+      },
+      "faust": {
+        "summary": "Eight-hour international attack-defense CTF: keep our own vulnbox services alive while exploiting and patching the same services on every other team.",
+        "result": "Team OpSec · 47th of 502 teams (top 10%)"
+      }
+    },
+    "scoreboard": "Scoreboard"
+  },
+  "Projects": {
+    "eyebrow": "projects",
+    "title": "Things I've built",
+    "source": "Source code",
+    "laptopAlt": "Anime-style Aleksandra typing on a laptop",
+    "items": {
+      "shadowbox": {
+        "title": "ShadowBox",
+        "body": "A self-hosted anonymous e-mail service: NestJS API, PostgreSQL, Dockerised deployment behind Nginx with automated TLS."
+      },
+      "site": {
+        "title": "This website",
+        "body": "Next.js with a strict nonce-based CSP, hardened security headers, zero cookies, zero third-party scripts and automated accessibility tests."
+      }
+    }
+  },
+  "Writing": {
+    "eyebrow": "writing",
+    "title": "Notes from the field",
+    "blogTitle": "From the blog",
+    "linkedinTitle": "On LinkedIn",
+    "allPosts": "All blog posts",
+    "readOnLinkedin": "Read on LinkedIn",
+    "allLinkedin": "All LinkedIn posts"
+  },
+  "Contact": {
+    "eyebrow": "contact",
+    "title": "Let's make your app harder to break",
+    "body": "Open to AppSec and penetration-testing roles, freelance assessments and interesting conversations. The fastest way to reach me is e-mail or Telegram.",
+    "copy": "Copy e-mail address",
+    "copied": "E-mail address copied",
+    "waveAlt": "Anime-style Aleksandra waving hello"
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Write-ups, research notes and lessons from application security and OSINT.",
+    "empty": "No posts yet.",
+    "readingTime": "{minutes} min read",
+    "back": "All posts",
+    "fallbackNotice": "This post is not translated yet — showing the English version.",
+    "readingAlt": "Anime-style Aleksandra reading notes",
+    "articlesTitle": "Articles",
+    "linkedinTitle": "From LinkedIn",
+    "linkedinDescription": "Short posts mirrored from my LinkedIn — labs, CTFs and security news.",
+    "viewOnLinkedin": "View on LinkedIn"
+  },
+  "Footer": {
+    "privacy": "No cookies. No trackers. Strict CSP.",
+    "security": "security.txt",
+    "rss": "RSS"
+  },
+  "NotFound": {
+    "title": "404 — nothing to exploit here",
+    "body": "The page you are looking for does not exist or has moved.",
+    "home": "Back to the home page",
+    "lostAlt": "Anime-style Aleksandra looking puzzled"
+  }
+}
