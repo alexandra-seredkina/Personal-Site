@@ -21,20 +21,20 @@
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.3.8",
+    "@next/mdx": "^16.4.2",
     "clsx": "^2.1.1",
     "motion": "^13.4.6",
-    "next": "^16.3.8",
-    "next-intl": "^4.14.8",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "next": "^16.4.2",
+    "next-intl": "^4.14.9",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "rehype-pretty-code": "^0.14.5",
     "remark-gfm": "^4.0.1",
     "server-only": "^0.0.1",
-    "shiki": "^4.4.3",
-    "simple-icons": "^16.33.0",
+    "shiki": "^4.5.0",
+    "simple-icons": "^16.35.0",
     "tailwind-merge": "^3.7.0",
-    "zod": "^4.6.5"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
